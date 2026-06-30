@@ -54,8 +54,8 @@
               </v-btn>
             </div>
             
-            <!-- Quick Credibility Features -->
-            <div class="d-flex flex-wrap align-center gap-6 pt-6 border-t border-white-15">
+            <!-- Quick Credibility Features (Hidden on mobile to save vertical space) -->
+            <div class="d-none d-md-flex flex-wrap align-center gap-6 pt-6 border-t border-white-15">
               <div class="d-flex align-center">
                 <v-avatar color="rgba(255, 255, 255, 0.12)" size="38" class="mr-3">
                   <v-icon icon="mdi-shield-account-outline" color="primary" size="20"></v-icon>
@@ -124,13 +124,13 @@
       </div>
       
       <v-row>
-        <v-col v-for="cat in categories" :key="cat.title" cols="12" sm="6" md="3" class="animate-scroll">
+        <v-col v-for="cat in categories" :key="cat.title" cols="6" sm="6" md="3" class="animate-scroll">
           <v-card class="category-card rounded-xl text-center pa-8 h-100 elevation-1 hover-shadow-primary transition-all">
             <v-avatar :color="cat.bgColor" size="80" class="mb-5 custom-avatar-glow">
               <v-icon :icon="cat.icon" :color="cat.iconColor" size="36"></v-icon>
             </v-avatar>
             <h3 class="text-h6 font-weight-bold text-navy mb-3 font-playfair">{{ cat.title }}</h3>
-            <p class="text-body-2 text-grey-600 mb-6 leading-relaxed">{{ cat.desc }}</p>
+            <p class="text-body-2 text-grey-600 mb-6 leading-relaxed d-none d-sm-block">{{ cat.desc }}</p>
             <v-btn
               to="/layanan"
               color="primary"
@@ -166,7 +166,7 @@
             <p class="text-body-1 text-grey-700 leading-relaxed mb-6" style="font-size: 1.08rem !important; line-height: 1.8;">
               Bidan Lila percaya bahwa setiap fase tumbuh kembang si kecil dan pemulihan tubuh Bunda pasca melahirkan adalah momen sakral yang butuh asuhan profesional dan penuh empati.
             </p>
-            <p class="text-body-2 text-grey-600 leading-relaxed mb-8">
+            <p class="text-body-2 text-grey-600 leading-relaxed mb-8 d-none d-sm-block">
               Tanpa perlu mengantre lama di klinik atau membuang tenaga di tengah kemacetan Jabodetabek, kami hadir membawa seluruh fasilitas spa portabel lengkap, disterilisasi dengan standar medis, serta produk minyak aromaterapi organik berkualitas demi kenyamanan maksimal Bunda sekeluarga.
             </p>
             
@@ -218,7 +218,7 @@
                 <v-icon :icon="item.icon" color="accent" size="35"></v-icon>
               </v-avatar>
               <h3 class="text-h6 font-weight-bold text-white mb-3 font-playfair">{{ item.title }}</h3>
-              <p class="text-body-2 text-grey-300 leading-relaxed" style="font-size: 0.9rem !important;">{{ item.desc }}</p>
+              <p class="text-body-2 text-grey-300 leading-relaxed d-none d-sm-block" style="font-size: 0.9rem !important;">{{ item.desc }}</p>
             </v-card>
           </v-col>
         </v-row>
@@ -236,7 +236,7 @@
       <v-row>
         <v-col v-for="service in featuredServices" :key="service.id" cols="12" md="4" class="animate-scroll">
           <v-card class="service-card rounded-xl elevation-1 h-100 hover-shadow transition-all d-flex flex-column bg-white">
-            <v-img :src="service.image" height="240" cover class="align-end text-white position-relative">
+            <v-img :src="service.image" cover class="align-end text-white position-relative service-card-img">
               <v-chip color="primary" class="position-absolute top-4 left-4 font-weight-bold" size="small">
                 {{ service.category }}
               </v-chip>
@@ -258,7 +258,7 @@
                 </div>
               </div>
               
-              <p class="text-body-2 text-grey-600 line-clamp-3 leading-relaxed">
+              <p class="text-body-2 text-grey-600 line-clamp-3 leading-relaxed d-none d-sm-block">
                 {{ service.description }}
               </p>
             </v-card-item>
@@ -334,7 +334,7 @@
       <v-row v-if="articles.length > 0">
         <v-col v-for="article in articles.slice(0, 3)" :key="article.id" cols="12" md="4" class="animate-scroll">
           <v-card class="rounded-xl elevation-1 h-100 d-flex flex-column hover-shadow transition-all bg-white">
-            <v-img :src="article.image" height="210" cover></v-img>
+            <v-img :src="article.image" class="article-card-img" cover></v-img>
             <v-card-item class="flex-grow-1 pa-6">
               <span class="text-caption font-weight-bold text-teal d-block mb-1">{{ article.category }}</span>
               <h3 class="text-h6 font-weight-bold text-navy mb-2 line-clamp-2 font-playfair">
@@ -342,7 +342,7 @@
                   {{ article.title }}
                 </router-link>
               </h3>
-              <p class="text-body-2 text-grey-600 line-clamp-3 leading-relaxed">
+              <p class="text-body-2 text-grey-600 line-clamp-3 leading-relaxed d-none d-sm-block">
                 {{ article.summary }}
               </p>
             </v-card-item>
@@ -786,6 +786,13 @@ onMounted(() => {
   overflow: hidden;
 }
 
+.service-card-img {
+  height: 240px !important;
+}
+.article-card-img {
+  height: 210px !important;
+}
+
 @media (max-width: 959px) {
   .hero-section {
     text-align: center !important;
@@ -807,6 +814,12 @@ onMounted(() => {
   .frame-decorator {
     left: -15px;
     top: 15px;
+  }
+  .service-card-img {
+    height: 150px !important;
+  }
+  .article-card-img {
+    height: 140px !important;
   }
 }
 </style>
