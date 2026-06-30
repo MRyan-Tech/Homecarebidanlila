@@ -144,7 +144,25 @@
               <v-text-field v-model.number="serviceForm.duration" label="Durasi (Menit)" type="number" variant="outlined" color="primary" required></v-text-field>
             </v-col>
           </v-row>
-          <v-text-field v-model="serviceForm.image" label="URL Foto Gambar Layanan" variant="outlined" color="primary" class="mb-3"></v-text-field>
+          <!-- File Preview -->
+          <div v-if="serviceForm.image" class="mb-3 text-center">
+            <v-img :src="serviceForm.image" max-height="150" contain class="rounded-xl border bg-grey-50 mx-auto"></v-img>
+            <span class="text-caption text-grey-500 d-block mt-1">Pratinjau Gambar Layanan</span>
+          </div>
+          
+          <!-- File Input for local upload -->
+          <v-file-input
+            label="Pilih Foto Gambar Layanan (Lokal)"
+            variant="outlined"
+            color="primary"
+            prepend-icon="mdi-camera"
+            accept="image/*"
+            class="mb-3"
+            @update:model-value="onServiceFileChange"
+          ></v-file-input>
+
+          <!-- Text field if they still want to paste URL -->
+          <v-text-field v-model="serviceForm.image" label="Atau Masukkan URL Gambar (Opsional)" variant="outlined" color="primary" density="compact" class="mb-3"></v-text-field>
           <v-textarea v-model="serviceForm.description" label="Deskripsi Detail" variant="outlined" color="primary" rows="4" class="mb-6"></v-textarea>
           
           <v-card-actions class="px-0">
@@ -172,7 +190,25 @@
               <v-text-field v-model="articleForm.keywords" label="SEO Keywords (pisahkan dengan koma)" placeholder="pijat bayi, baby spa, dll" variant="outlined" color="primary"></v-text-field>
             </v-col>
           </v-row>
-          <v-text-field v-model="articleForm.image" label="URL Gambar Utama" variant="outlined" color="primary" class="mb-3"></v-text-field>
+          <!-- File Preview -->
+          <div v-if="articleForm.image" class="mb-3 text-center">
+            <v-img :src="articleForm.image" max-height="150" contain class="rounded-xl border bg-grey-50 mx-auto"></v-img>
+            <span class="text-caption text-grey-500 d-block mt-1">Pratinjau Gambar Utama Artikel</span>
+          </div>
+
+          <!-- File Input for local upload -->
+          <v-file-input
+            label="Pilih Gambar Utama Artikel (Lokal)"
+            variant="outlined"
+            color="primary"
+            prepend-icon="mdi-camera"
+            accept="image/*"
+            class="mb-3"
+            @update:model-value="onArticleFileChange"
+          ></v-file-input>
+
+          <!-- Text field if they still want to paste URL -->
+          <v-text-field v-model="articleForm.image" label="Atau Masukkan URL Gambar (Opsional)" variant="outlined" color="primary" density="compact" class="mb-3"></v-text-field>
           <v-textarea v-model="articleForm.summary" label="Ringkasan Pendek (Summary)" variant="outlined" color="primary" rows="2" required class="mb-3"></v-textarea>
           
           <div class="text-subtitle-2 font-weight-bold text-grey-700 mb-2">Konten Artikel (Bisa diisi HTML)</div>
@@ -468,6 +504,54 @@ const handleLogout = () => {
   localStorage.removeItem("adminToken");
   localStorage.removeItem("adminUser");
   router.push("/admin");
+};
+
+// Compress image helper using HTML5 Canvas to keep Base64 strings tiny (< 100KB)
+const compressImage = (file, callback) => {
+  const reader = new FileReader();
+  reader.onload = (event) => {
+    const img = new Image();
+    img.onload = () => {
+      const canvas = document.createElement("canvas");
+      const max_width = 800; // Limit image dimensions for fast loading
+      let width = img.width;
+      let height = img.height;
+      
+      if (width > max_width) {
+        height = Math.round((height * max_width) / width);
+        width = max_width;
+      }
+      
+      canvas.width = width;
+      canvas.height = height;
+      const ctx = canvas.getContext("2d");
+      ctx.drawImage(img, 0, 0, width, height);
+      
+      // Get the base64 string compressed to JPEG with 0.7 quality
+      const dataUrl = canvas.toDataURL("image/jpeg", 0.7);
+      callback(dataUrl);
+    };
+    img.src = event.target.result;
+  };
+  reader.readAsDataURL(file);
+};
+
+const onServiceFileChange = (file) => {
+  if (!file) return;
+  const fileObj = Array.isArray(file) ? file[0] : file;
+  if (!fileObj) return;
+  compressImage(fileObj, (dataUrl) => {
+    serviceForm.value.image = dataUrl;
+  });
+};
+
+const onArticleFileChange = (file) => {
+  if (!file) return;
+  const fileObj = Array.isArray(file) ? file[0] : file;
+  if (!fileObj) return;
+  compressImage(fileObj, (dataUrl) => {
+    articleForm.value.image = dataUrl;
+  });
 };
 
 onMounted(() => {
