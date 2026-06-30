@@ -5,8 +5,9 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Database path will be in the backend root directory as database.sqlite
 const dbPath = path.resolve(__dirname, "../../database.sqlite");
+
+console.log("DATABASE PATH:", dbPath);
 
 const sequelize = new Sequelize({
   dialect: "sqlite",
