@@ -6,12 +6,12 @@
     },
     "backend": {
       "root": "backend",
-      "entrypoint": "src/server.js"
-    }
-  },
-  "functions": {
-    "backend/src/server.js": {
-      "includeFiles": "backend/node_modules/sqlite3/**"
+      "entrypoint": "src/server.js",
+      "functions": {
+        "src/server.js": {
+          "includeFiles": "node_modules/sqlite3/**"
+        }
+      }
     }
   },
   "rewrites": [
