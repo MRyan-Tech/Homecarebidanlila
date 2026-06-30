@@ -213,7 +213,7 @@
         
         <v-row class="gy-8">
           <v-col v-for="item in features" :key="item.title" cols="12" md="4" class="animate-scroll">
-            <v-card bg-color="rgba(255, 255, 255, 0.04)" class="text-center pa-8 rounded-xl border border-white-05 text-white h-100 glass-card">
+            <v-card variant="flat" class="text-center pa-8 rounded-xl border border-white-05 text-white h-100 glass-card">
               <v-avatar color="rgba(228, 179, 115, 0.15)" size="70" class="mb-5">
                 <v-icon :icon="item.icon" color="accent" size="35"></v-icon>
               </v-avatar>
@@ -735,6 +735,7 @@ onMounted(() => {
 
 /* Why choose us glass card */
 .glass-card {
+  background-color: rgba(255, 255, 255, 0.06) !important;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255,255,255,0.06) !important;
   box-shadow: 0 15px 35px rgba(0,0,0,0.18) !important;
