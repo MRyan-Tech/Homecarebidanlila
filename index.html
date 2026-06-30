@@ -1,66 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-  <!-- Meta Tags -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <title>Homecare Bidan Lila</title>
+  
+  <!-- SEO Meta Tags -->
+  <title>Homecare Bidan Lila - Jasa Pijat Bayi, Baby Spa, & Pijat Laktasi Jabodetabek</title>
+  <meta name="description" content="Homecare Bidan Lila menyediakan layanan homecare kebidanan profesional se-Jabodetabek. Layanan meliputi Baby Spa, Pijat Bayi, Pijat Laktasi, Pijat Ibu Hamil, dan Perawatan Bayi Baru Lahir langsung di rumah Anda oleh Bidan bersertifikat." />
+  <meta name="keywords" content="homecare bidan lila, homecare bayi, baby spa, pijat laktasi, pijat bayi, prenatal massage, postpartum care, bidan homecare terdekat, homecare jakarta, homecare depok, homecare bekasi, homecare tangerang, homecare bogor" />
+  <meta name="author" content="Bidan Lila" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://homecare-bidan-lila.test/" />
+  <meta property="og:title" content="Homecare Bidan Lila - Layanan Kebidanan & Perawatan Ibu & Anak di Rumah" />
+  <meta property="og:description" content="Layanan homecare bidan profesional se-Jabodetabek. Baby Spa, Pijat Bayi, Pijat Laktasi, Pijat Ibu Hamil langsung di rumah Anda." />
+  <meta property="og:image" content="/images/Logo.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://homecare-bidan-lila.test/" />
+  <meta property="twitter:title" content="Homecare Bidan Lila - Layanan Kebidanan & Perawatan Ibu & Anak di Rumah" />
+  <meta property="twitter:description" content="Layanan homecare bidan profesional se-Jabodetabek. Baby Spa, Pijat Bayi, Pijat Laktasi, Pijat Ibu Hamil langsung di rumah Anda." />
+  <meta property="twitter:image" content="/images/Logo.png" />
 
   <!-- Favicon -->
-  <link rel="shortcut icon" href="images/Logo.png" />
+  <link rel="shortcut icon" href="/images/Logo.png" type="image/x-icon" />
 
-  <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome 6 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Font Awesome 6 for supplementary icons if needed -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-  <!-- Owl Carousel CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-
-  <!-- Nice Select CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" />
-
-  <!-- Custom CSS -->
-  <link href="css/style.css" rel="stylesheet" />
-  <link href="css/responsive.css" rel="stylesheet" />
+  <!-- Structured Data JSON-LD for Local SEO (Google Rich Snippets) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Homecare Bidan Lila",
+    "image": "https://homecare-bidan-lila.test/images/Logo.png",
+    "@id": "https://homecare-bidan-lila.test",
+    "url": "https://homecare-bidan-lila.test",
+    "telephone": "+6281365417753",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Layanan Kunjungan Homecare",
+      "addressLocality": "Depok",
+      "addressRegion": "Jawa Barat / DKI Jakarta",
+      "postalCode": "16411",
+      "addressCountry": "ID"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -6.4025,
+      "longitude": 106.7942
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "07:00",
+      "closes": "21:00"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+6281365417753",
+      "contactType": "customer service",
+      "contactOption": "TollFree",
+      "areaServed": "ID",
+      "availableLanguage": ["Indonesian"]
+    },
+    "sameAs": [
+      "https://www.instagram.com/bidanlila_homecare",
+      "https://wa.me/6281365417753"
+    ]
+  }
+  </script>
 </head>
 <body>
-  <!-- Vue app mount point -->
+  <!-- Vue App mount point -->
   <div id="app"></div>
 
-  <!-- Main JS Vue App -->
+  <!-- Entry Script for Vue App -->
   <script type="module" src="/src/main.js"></script>
-
-  <!-- jQuery (needed for nice-select, owl-carousel) -->
-  <script src="/js/jquery-3.4.1.min.js" defer></script>
-
-  <!-- Bootstrap 5 Bundle (includes Popper) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Owl Carousel JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" defer></script>
-
-  <!-- Isotope Layout -->
-  <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js" defer></script>
-
-  <!-- Nice Select JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js" defer></script>
-
-  <!-- Custom JS -->
-  <script type="module" src="/js/custom.js" defer></script>
-
-  <!-- Google Maps -->
-  <script>
-    function initMap() {
-      if (typeof google !== 'undefined') {
-        myMap();
-      } else {
-        console.error("Google Maps API gagal dimuat. Periksa API Key Anda.");
-      }
-    }
-  </script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=initMap" defer></script>
 </body>
 </html>

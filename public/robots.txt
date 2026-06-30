@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://homecare-bidan-lila.test/sitemap.xml
