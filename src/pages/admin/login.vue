@@ -87,7 +87,7 @@ const handleLogin = async () => {
   errorMessage.value = "";
 
   try {
-    const res = await axios.post("http://localhost:5000/api/auth/login", loginForm.value);
+    const res = await axios.post("/api/auth/login", loginForm.value);
     
     // Save token and user details to localStorage
     localStorage.setItem("adminToken", res.data.token);

@@ -284,7 +284,7 @@ const generateBookingCode = () => {
 
 const fetchServices = async () => {
   try {
-    const res = await axios.get("http://localhost:5000/api/services");
+    const res = await axios.get("/api/services");
     serviceOptions.value = res.data.map(s => s.name);
   } catch (err) {
     serviceOptions.value = [
@@ -349,7 +349,7 @@ Mohon konfirmasi ketersediaan jadwal. Terima kasih!`;
       notes: bookingForm.value.notes,
     };
 
-    await axios.post("http://localhost:5000/api/bookings", payload);
+    await axios.post("/api/bookings", payload);
     
     submitSuccess.value = true;
     submitMessage.value = `Pemesanan berhasil disimpan! Kode Booking Anda: ${bookingCode}. WhatsApp telah dibuka di tab baru.`;

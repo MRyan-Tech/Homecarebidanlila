@@ -295,7 +295,7 @@ const getStatusColor = (status) => {
 const fetchBookings = async () => {
   loadingBookings.value = true;
   try {
-    const res = await axios.get("http://localhost:5000/api/bookings", getHeadersConfig());
+    const res = await axios.get("/api/bookings", getHeadersConfig());
     bookings.value = res.data;
   } catch (err) {
     console.error("Gagal memuat booking");
@@ -307,7 +307,7 @@ const fetchBookings = async () => {
 // Update booking status
 const updateBookingStatus = async (id, status) => {
   try {
-    await axios.put(`http://localhost:5000/api/bookings/${id}/status`, { status }, getHeadersConfig());
+    await axios.put(`/api/bookings/${id}/status`, { status }, getHeadersConfig());
     fetchBookings();
   } catch (err) {
     alert("Gagal memperbarui status");
@@ -318,7 +318,7 @@ const updateBookingStatus = async (id, status) => {
 const deleteBooking = async (id) => {
   if (!confirm("Hapus data pemesanan ini?")) return;
   try {
-    await axios.delete(`http://localhost:5000/api/bookings/${id}`, getHeadersConfig());
+    await axios.delete(`/api/bookings/${id}`, getHeadersConfig());
     fetchBookings();
   } catch (err) {
     alert("Gagal menghapus data");
@@ -329,7 +329,7 @@ const deleteBooking = async (id) => {
 const fetchServices = async () => {
   loadingServices.value = true;
   try {
-    const res = await axios.get("http://localhost:5000/api/services");
+    const res = await axios.get("/api/services");
     services.value = res.data;
   } catch (err) {
     console.error("Gagal memuat layanan");
@@ -371,9 +371,9 @@ const submitServiceForm = async () => {
   savingService.value = true;
   try {
     if (isEditingService.value) {
-      await axios.put(`http://localhost:5000/api/services/${currentServiceId.value}`, serviceForm.value, getHeadersConfig());
+      await axios.put(`/api/services/${currentServiceId.value}`, serviceForm.value, getHeadersConfig());
     } else {
-      await axios.post("http://localhost:5000/api/services", serviceForm.value, getHeadersConfig());
+      await axios.post("/api/services", serviceForm.value, getHeadersConfig());
     }
     serviceDialog.value = false;
     fetchServices();
@@ -387,7 +387,7 @@ const submitServiceForm = async () => {
 const deleteService = async (id) => {
   if (!confirm("Hapus layanan homecare ini?")) return;
   try {
-    await axios.delete(`http://localhost:5000/api/services/${id}`, getHeadersConfig());
+    await axios.delete(`/api/services/${id}`, getHeadersConfig());
     fetchServices();
   } catch (err) {
     alert("Gagal menghapus layanan");
@@ -398,7 +398,7 @@ const deleteService = async (id) => {
 const fetchArticles = async () => {
   loadingArticles.value = true;
   try {
-    const res = await axios.get("http://localhost:5000/api/articles");
+    const res = await axios.get("/api/articles");
     articles.value = res.data;
   } catch (err) {
     console.error("Gagal memuat artikel");
@@ -440,9 +440,9 @@ const submitArticleForm = async () => {
   savingArticle.value = true;
   try {
     if (isEditingArticle.value) {
-      await axios.put(`http://localhost:5000/api/articles/${currentArticleId.value}`, articleForm.value, getHeadersConfig());
+      await axios.put(`/api/articles/${currentArticleId.value}`, articleForm.value, getHeadersConfig());
     } else {
-      await axios.post("http://localhost:5000/api/articles", articleForm.value, getHeadersConfig());
+      await axios.post("/api/articles", articleForm.value, getHeadersConfig());
     }
     articleDialog.value = false;
     fetchArticles();
@@ -456,7 +456,7 @@ const submitArticleForm = async () => {
 const deleteArticle = async (id) => {
   if (!confirm("Hapus artikel ini?")) return;
   try {
-    await axios.delete(`http://localhost:5000/api/articles/${id}`, getHeadersConfig());
+    await axios.delete(`/api/articles/${id}`, getHeadersConfig());
     fetchArticles();
   } catch (err) {
     alert("Gagal menghapus artikel");

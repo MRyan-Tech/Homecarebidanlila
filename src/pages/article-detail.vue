@@ -134,7 +134,7 @@ const formatDate = (dateStr) => {
 const fetchArticle = async () => {
   const slug = route.params.slug;
   try {
-    const res = await axios.get(`http://localhost:5000/api/articles/slug/${slug}`);
+    const res = await axios.get(`/api/articles/slug/${slug}`);
     article.value = res.data;
 
     // Dynamically update meta tags for SEO!
@@ -222,7 +222,7 @@ const fetchArticle = async () => {
 
   // Load recommendations
   try {
-    const resAll = await axios.get("http://localhost:5000/api/articles");
+    const resAll = await axios.get("/api/articles");
     recommendations.value = resAll.data.filter(a => a.slug !== slug).slice(0, 3);
   } catch (err) {
     recommendations.value = [];

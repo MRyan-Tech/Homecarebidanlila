@@ -108,7 +108,7 @@ const formatPrice = (price) => {
 const fetchService = async () => {
   const slug = route.params.slug;
   try {
-    const res = await axios.get(`http://localhost:5000/api/services/slug/${slug}`);
+    const res = await axios.get(`/api/services/slug/${slug}`);
     service.value = res.data;
     
     // Dynamically update document title and meta description for SEO!

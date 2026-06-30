@@ -104,7 +104,7 @@ const formatDate = (dateStr) => {
 
 const fetchData = async () => {
   try {
-    const res = await axios.get("http://localhost:5000/api/articles");
+    const res = await axios.get("/api/articles");
     articles.value = res.data;
   } catch (err) {
     console.log("Using static articles fallback");

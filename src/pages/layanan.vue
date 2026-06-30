@@ -143,7 +143,7 @@ const formatPrice = (price) => {
 
 const fetchData = async () => {
   try {
-    const res = await axios.get("http://localhost:5000/api/services");
+    const res = await axios.get("/api/services");
     services.value = res.data;
   } catch (err) {
     console.log("Using static services fallback");

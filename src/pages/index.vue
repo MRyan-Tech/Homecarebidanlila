@@ -485,7 +485,7 @@ const articles = ref([]);
 
 const fetchData = async () => {
   try {
-    const sRes = await axios.get("http://localhost:5000/api/services");
+    const sRes = await axios.get("/api/services");
     featuredServices.value = sRes.data.slice(0, 3);
   } catch (err) {
     console.log("Using static services fallback");
@@ -524,7 +524,7 @@ const fetchData = async () => {
   }
 
   try {
-    const aRes = await axios.get("http://localhost:5000/api/articles");
+    const aRes = await axios.get("/api/articles");
     articles.value = aRes.data;
   } catch (err) {
     console.log("Using static articles fallback");
