@@ -144,6 +144,10 @@ watch(() => route.params.slug, () => {
 </script>
 
 <style scoped>
+.service-detail-page {
+  background-color: #FFFBF7 !important;
+  min-height: 100vh;
+}
 .leading-tight {
   line-height: 1.2;
 }

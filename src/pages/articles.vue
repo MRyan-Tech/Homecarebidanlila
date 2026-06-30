@@ -157,6 +157,10 @@ onMounted(() => {
 </script>
 
 <style scoped>
+.articles-page {
+  background-color: #FFFBF7 !important;
+  min-height: 100vh;
+}
 .max-w-600 {
   max-width: 600px;
 }

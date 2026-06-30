@@ -19,19 +19,19 @@ body {
   font-family: 'Outfit', sans-serif !important;
 }
 .text-navy {
-  color: #2B3846 !important;
+  color: #1C2A39 !important;
 }
 .bg-navy {
-  background-color: #2B3846 !important;
+  background-color: #1C2A39 !important;
 }
 .text-teal {
-  color: #5E8C81 !important;
+  color: #4CA69C !important;
 }
 .bg-teal {
-  background-color: #5E8C81 !important;
+  background-color: #4CA69C !important;
 }
 .app-container {
-  background-color: #FAF6F0 !important;
+  background-color: #FFFBF7 !important;
 }
 .main-content {
   padding-bottom: 0px !important;

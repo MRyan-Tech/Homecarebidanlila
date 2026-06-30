@@ -239,17 +239,21 @@ watch(() => route.params.slug, () => {
 </script>
 
 <style>
+.article-detail-page {
+  background-color: #FFFBF7 !important;
+  min-height: 100vh;
+}
 .article-body h3 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 700;
-  color: #02345f;
+  color: #1C2A39;
   margin-top: 1.5rem;
   margin-bottom: 0.75rem;
 }
 .article-body h4 {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #02345f;
+  color: #1C2A39;
   margin-top: 1.25rem;
   margin-bottom: 0.5rem;
 }
@@ -268,7 +272,7 @@ watch(() => route.params.slug, () => {
   line-height: 1.6;
 }
 .hover-teal-text:hover {
-  color: #E91E63 !important;
+  color: #FF8E72 !important;
   transition: color 0.2s ease;
 }
 .gap-4 {

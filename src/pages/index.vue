@@ -581,7 +581,7 @@ onMounted(() => {
 }
 
 .bg-cream-base {
-  background-color: #FAF6F0 !important;
+  background-color: #FFFBF7 !important;
 }
 
 /* Hero Section Styles */
@@ -611,7 +611,7 @@ onMounted(() => {
   width: 100%;
   height: 100%;
   z-index: 2;
-  background: linear-gradient(135deg, rgba(43, 56, 70, 0.95) 0%, rgba(214, 159, 150, 0.5) 100%);
+  background: linear-gradient(135deg, rgba(28, 42, 57, 0.95) 0%, rgba(255, 142, 114, 0.5) 100%);
 }
 .z-10 {
   z-index: 10;
@@ -619,11 +619,11 @@ onMounted(() => {
 .accent-line {
   width: 70px;
   height: 4px;
-  background-color: #D69F96; /* Dusty Rose Primary */
+  background-color: #FF8E72; /* Warm Coral Primary */
   border-radius: 2px;
 }
 .text-accent {
-  color: #E4B373 !important; /* Elegant Champagne Gold */
+  color: #F8C868 !important; /* Elegant Gold */
 }
 .bg-glass {
   background-color: rgba(255, 255, 255, 0.08) !important;
@@ -714,7 +714,7 @@ onMounted(() => {
   left: -25px;
   width: 100%;
   height: 100%;
-  border: 4px solid #D69F96; /* Dusty Rose */
+  border: 4px solid #FF8E72; /* Warm Coral */
   border-radius: 16px;
   z-index: 1;
 }
@@ -726,11 +726,11 @@ onMounted(() => {
 }
 .category-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(214, 159, 150, 0.15) !important;
-  border-color: rgba(214, 159, 150, 0.3);
+  box-shadow: 0 20px 40px rgba(255, 142, 114, 0.15) !important;
+  border-color: rgba(255, 142, 114, 0.3);
 }
 .custom-avatar-glow {
-  box-shadow: 0 8px 20px rgba(214, 159, 150, 0.1);
+  box-shadow: 0 8px 20px rgba(255, 142, 114, 0.1);
 }
 
 /* Why choose us glass card */
@@ -747,14 +747,14 @@ onMounted(() => {
 }
 .service-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 25px 50px rgba(43, 56, 70, 0.08) !important;
-  border-color: rgba(214, 159, 150, 0.3);
+  box-shadow: 0 25px 50px rgba(28, 42, 57, 0.08) !important;
+  border-color: rgba(255, 142, 114, 0.3);
 }
 
 /* Testimonial card */
 .hover-shadow-primary:hover {
-  border-color: rgba(214, 159, 150, 0.4) !important;
-  box-shadow: 0 15px 35px rgba(214, 159, 150, 0.1) !important;
+  border-color: rgba(255, 142, 114, 0.4) !important;
+  box-shadow: 0 15px 35px rgba(255, 142, 114, 0.1) !important;
 }
 
 /* Scroll Animation Utilities */
@@ -769,7 +769,7 @@ onMounted(() => {
 }
 
 .hover-teal-text:hover {
-  color: #D69F96 !important;
+  color: #FF8E72 !important;
   transition: color 0.25s ease;
 }
 

@@ -6,17 +6,17 @@ import * as directives from "vuetify/directives";
 const customTheme = {
   dark: false,
   colors: {
-    primary: "#D69F96", // Luxury Dusty Rose / Rose Gold
-    secondary: "#5E8C81", // Professional Muted Sage Green
-    accent: "#E4B373", // Warm Sand / Champagne Gold
-    teal: "#5E8C81", // Sage Green for medical/spa trust
-    navy: "#2B3846", // Deep Slate Charcoal (very elegant typography & buttons)
-    background: "#FAF6F0", // Premium Warm Ivory / Alabaster Cream
+    primary: "#FF8E72", // Warm Coral / Peach Blush
+    secondary: "#4CA69C", // Healing Teal / Mint Green
+    accent: "#F8C868", // Sunshine Gold
+    teal: "#4CA69C", // Healing Teal
+    navy: "#1C2A39", // Deep Ink Navy
+    background: "#FFFBF7", // Vanilla Cream / Cozy Warm Sand
     surface: "#FFFFFF",
-    error: "#E05A47",
+    error: "#FF6B6B",
     info: "#5C85A8",
-    success: "#5E8C81",
-    warning: "#E4B373",
+    success: "#4CA69C",
+    warning: "#F8C868",
   },
 };
 

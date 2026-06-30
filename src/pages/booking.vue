@@ -380,7 +380,7 @@ onMounted(() => {
 }
 
 .bg-cream-base {
-  background-color: #FAF6F0 !important;
+  background-color: #FFFBF7 !important;
 }
 
 /* Header Section Background overlay */
@@ -405,7 +405,7 @@ onMounted(() => {
   width: 100%;
   height: 100%;
   z-index: 2;
-  background: linear-gradient(135deg, rgba(43, 56, 70, 0.95) 0%, rgba(214, 159, 150, 0.5) 100%);
+  background: linear-gradient(135deg, rgba(28, 42, 57, 0.95) 0%, rgba(255, 142, 114, 0.5) 100%);
 }
 .z-10 {
   z-index: 10;
@@ -413,7 +413,7 @@ onMounted(() => {
 .accent-line {
   width: 60px;
   height: 4px;
-  background-color: #D69F96;
+  background-color: #FF8E72;
   border-radius: 2px;
 }
 .max-w-600 {
@@ -428,11 +428,11 @@ onMounted(() => {
   width: 140px;
   height: 140px;
   border-radius: 50%;
-  background: rgba(214, 159, 150, 0.18);
+  background: rgba(255, 142, 114, 0.18);
   z-index: 1;
 }
 .text-accent {
-  color: #E4B373 !important;
+  color: #F8C868 !important;
 }
 .border-grey-800 {
   border-color: rgba(255, 255, 255, 0.1) !important;
@@ -446,11 +446,11 @@ onMounted(() => {
 
 .btn-submit-luxury {
   border-radius: 30px !important;
-  box-shadow: 0 8px 20px rgba(214, 159, 150, 0.3) !important;
+  box-shadow: 0 8px 20px rgba(255, 142, 114, 0.3) !important;
   transition: all 0.3s ease !important;
 }
 .btn-submit-luxury:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 25px rgba(214, 159, 150, 0.45) !important;
+  box-shadow: 0 12px 25px rgba(255, 142, 114, 0.45) !important;
 }
 </style>

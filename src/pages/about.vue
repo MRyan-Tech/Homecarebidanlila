@@ -185,6 +185,10 @@ const faqs = ref([
   object-fit: cover;
   filter: brightness(0.5) blur(1px);
 }
+.about-page {
+  background-color: #FFFBF7 !important;
+  min-height: 100vh;
+}
 .header-overlay {
   position: absolute;
   top: 0;
@@ -192,7 +196,7 @@ const faqs = ref([
   width: 100%;
   height: 100%;
   z-index: 2;
-  background: linear-gradient(135deg, rgba(43, 56, 70, 0.95) 0%, rgba(214, 159, 150, 0.5) 100%);
+  background: linear-gradient(135deg, rgba(28, 42, 57, 0.95) 0%, rgba(255, 142, 114, 0.5) 100%);
 }
 .z-10 {
   z-index: 10;
@@ -200,7 +204,7 @@ const faqs = ref([
 .accent-line {
   width: 60px;
   height: 4px;
-  background-color: #D69F96;
+  background-color: #FF8E72;
   border-radius: 2px;
 }
 .max-w-600 {
@@ -224,7 +228,7 @@ const faqs = ref([
   left: -20px;
   width: 100%;
   height: 100%;
-  border: 4px solid #D69F96;
+  border: 4px solid #FF8E72;
   border-radius: 24px;
   z-index: 1;
 }
