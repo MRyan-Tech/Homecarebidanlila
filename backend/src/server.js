@@ -21,6 +21,24 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
+// Lazy Database Initialization Middleware (for Vercel Serverless compatibility)
+let dbInitialized = false;
+const initDbMiddleware = async (req, res, next) => {
+  if (!dbInitialized) {
+    try {
+      await sequelize.sync({ force: false });
+      await seedDatabase();
+      dbInitialized = true;
+      console.log("Database SQLite synchronized and seeded successfully!");
+    } catch (err) {
+      console.error("Database initialization failed during request:", err);
+    }
+  }
+  next();
+};
+
+app.use(initDbMiddleware);
+
 // Routes mapping
 app.use("/api/auth", authRoutes);
 app.use("/api/services", serviceRoutes);
@@ -205,16 +223,11 @@ async function seedDatabase() {
   }
 }
 
-// Sync Database and Start Server
-sequelize
-  .sync({ force: false })
-  .then(async () => {
-    console.log("Database SQLite synchronized successfully!");
-    await seedDatabase();
-    app.listen(PORT, () => {
-      console.log(`Server is running on port http://localhost:${PORT}`);
-    });
-  })
-  .catch((err) => {
-    console.error("Unable to sync database:", err);
+// Start Server locally if not running on Vercel
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`Server is running on port http://localhost:${PORT}`);
   });
+}
+
+export default app;
