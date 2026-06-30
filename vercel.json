@@ -1,57 +1,16 @@
 {
-  "services": {
-    "frontend": {
-      "root": ".",
-      "framework": "vite"
-    },
-    "backend": {
-      "root": "backend",
-      "entrypoint": "src/server.js",
-      "functions": {
-        "src/server.js": {
-          "includeFiles": "node_modules/sqlite3/**"
-        }
-      }
+  "functions": {
+    "api/index.js": {
+      "includeFiles": "node_modules/sqlite3/**"
     }
   },
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": {
-        "type": "service",
-        "service": "backend"
-      }
+      "destination": "/api/index.js"
     },
     {
-      "source": "/assets/(.*)",
-      "destination": {
-        "type": "service",
-        "service": "frontend"
-      }
-    },
-    {
-      "source": "/images/(.*)",
-      "destination": {
-        "type": "service",
-        "service": "frontend"
-      }
-    },
-    {
-      "source": "/favicon.ico",
-      "destination": {
-        "type": "service",
-        "service": "frontend"
-      }
-    },
-    {
-      "source": "/index.html",
-      "destination": {
-        "type": "service",
-        "service": "frontend"
-      }
-    },
-    {
-      "source": "/(.*)",
+      "source": "/((?!api/).*)",
       "destination": "/index.html"
     }
   ]
