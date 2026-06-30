@@ -402,7 +402,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, onMounted, nextTick } from "vue";
 import axios from "axios";
 
 const formatPrice = (price) => {
@@ -470,18 +470,39 @@ const testimonials = ref([
     name: "Bunda Ayu & Baby Kenzo",
     status: "Depok, Jawa Barat",
     comment: "Baby Spa dengan Bidan Lila juara banget! Baby Kenzo seneng banget berendamnya, terus abis dipijit langsung bobo nyenyak banget berjam-jam. Bidan Lila telaten, ramah, dan sabar banget meladeni bayi.",
-    image: "/images/client1.jpg",
+    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=120&auto=format&fit=crop&q=80",
   },
   {
-    name: "Bunda Rini",
+    name: "Bunda Rini & Baby Arka",
     status: "Jakarta Selatan",
-    comment: "Sempat stres karena ASI seret di hari ke-4 pasca melahirkan. Panggil Bidan Lila buat Pijat Laktasi di rumah. Setelah dipijat punggung dan payudara, badan terasa rileks, dan besoknya ASI langsung rembes deres. Terima kasih!",
-    image: "/images/client2.jpg",
+    comment: "Sangat terbantu dengan layanan pijat laktasi homecare Bidan Lila. ASI yang tadinya seret dan mampet langsung lancar deras setelah sekali sesi terapi. Bidannya sangat edukatif dan teliti.",
+    image: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=120&auto=format&fit=crop&q=80",
   },
 ]);
 
 const featuredServices = ref([]);
 const articles = ref([]);
+
+// Intersection Observer helper for scroll animations (handles both static and dynamic content)
+let scrollObserver = null;
+const initScrollObserver = () => {
+  if (!scrollObserver) {
+    scrollObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animated");
+        }
+      });
+    }, { threshold: 0.1 });
+  }
+
+  document.querySelectorAll(".animate-scroll").forEach((el) => {
+    if (!el.classList.contains("animate-scroll-init")) {
+      el.classList.add("animate-scroll-init");
+      scrollObserver.observe(el);
+    }
+  });
+};
 
 const fetchData = async () => {
   try {
@@ -547,25 +568,16 @@ const fetchData = async () => {
       },
     ];
   }
+
+  // Observe dynamically loaded elements once they are rendered in the DOM
+  nextTick(() => {
+    initScrollObserver();
+  });
 };
 
 onMounted(() => {
   fetchData();
-  
-  // Interactive Scroll Intersection Observer setup!
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("animated");
-      }
-    });
-  }, { threshold: 0.15 });
-
-  // Select all animate-scroll elements
-  document.querySelectorAll(".animate-scroll").forEach((el) => {
-    el.classList.add("animate-scroll-init"); // Initial transform state
-    observer.observe(el);
-  });
+  initScrollObserver();
 });
 </script>
 
