@@ -3,7 +3,7 @@
     <!-- Header Section -->
     <v-sheet color="navy" class="py-16 text-white text-center position-relative mb-12" min-height="35vh" style="display: flex; align-items: center;">
       <div class="header-bg-wrapper">
-        <img src="/images/hero-bg.jpg" alt="Background" class="header-bg-img" />
+        <img src="/images/Bg-Homecare.jpg" alt="Background" class="header-bg-img" />
       </div>
       <div class="header-overlay"></div>
       

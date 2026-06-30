@@ -3,7 +3,7 @@
     <!-- Header Section with background image overlay -->
     <v-sheet color="navy" class="py-16 text-white text-center position-relative mb-12" min-height="40vh" style="display: flex; align-items: center;">
       <div class="header-bg-wrapper">
-        <img src="/images/hero-bg.jpg" alt="Background" class="header-bg-img" />
+        <img src="/images/Bg-Homecare.jpg" alt="Background" class="header-bg-img" />
       </div>
       <div class="header-overlay"></div>
       
@@ -24,7 +24,7 @@
           <div class="profile-frame position-relative mx-auto">
             <v-card class="rounded-xl overflow-hidden elevation-6 bg-white pa-4 relative z-10">
               <img
-                src="/images/about-image.png"
+                src="https://images.unsplash.com/photo-1594824813573-246434de83fb?w=800&auto=format&fit=crop&q=80"
                 alt="Bidan Lila"
                 class="rounded-xl bg-pink-lighten-5 mb-4 profile-portrait-img"
               />

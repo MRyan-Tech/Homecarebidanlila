@@ -152,7 +152,7 @@
           <v-col cols="12" md="5" class="d-flex justify-center animate-scroll">
             <div class="about-image-frame position-relative">
               <img
-                src="/images/about-img.png"
+                src="https://images.unsplash.com/photo-1531062991700-403473034c9d?w=800&auto=format&fit=crop&q=80"
                 alt="Tentang Bidan Lila"
                 class="about-img rounded-xl elevation-6"
               />

@@ -56,7 +56,7 @@ async function seedDatabase() {
         description: "Layanan stimulasi tumbuh kembang bayi yang dipandu oleh bidan bersertifikat. Meliputi senam bayi (baby gym), berendam air hangat (baby swim), dan pijat stimulasi bayi menggunakan baby oil organic untuk merangsang motorik, melancarkan pencernaan, serta meningkatkan kualitas tidur bayi.",
         price: 175000,
         duration: 60,
-        image: "https://images.unsplash.com/photo-1519689680058-324335c77ebe?w=600&auto=format&fit=crop&q=80",
+        image: "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=600&auto=format&fit=crop&q=80",
       },
       {
         name: "Pijat Laktasi & Oksitosin Ibu Menyusui",
@@ -65,7 +65,7 @@ async function seedDatabase() {
         description: "Pijat terapi payudara, tengkuk, dan punggung untuk merangsang pelepasan hormon prolaktin dan oksitosin. Bermanfaat mengatasi masalah ASI tersumbat (seret), meredakan payudara bengkak, memberikan efek relaksasi yang mendalam bagi ibu menyusui, serta melancarkan aliran ASI.",
         price: 200000,
         duration: 60,
-        image: "https://images.unsplash.com/photo-1544025162-d76694265947?w=600&auto=format&fit=crop&q=80",
+        image: "https://images.unsplash.com/photo-1596464716127-f2a82984de30?w=600&auto=format&fit=crop&q=80",
       },
       {
         name: "Prenatal Massage (Pijat Ibu Hamil)",
@@ -74,7 +74,7 @@ async function seedDatabase() {
         description: "Relaksasi khusus ibu hamil mulai dari trimester kedua (usia kandungan di atas 14 minggu). Bermanfaat untuk meredakan nyeri punggung bawah, kaki bengkak, mengurangi kecemasan, serta merelaksasikan otot-otot yang tegang demi mempersiapkan persalinan yang lancar.",
         price: 225000,
         duration: 75,
-        image: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=600&auto=format&fit=crop&q=80",
+        image: "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?w=600&auto=format&fit=crop&q=80",
       },
       {
         name: "Newborn Care & Perawatan Tali Pusat",
@@ -92,7 +92,7 @@ async function seedDatabase() {
         description: "Perawatan komprehensif bagi ibu pasca melahirkan. Meliputi pijat seluruh badan untuk mengembalikan kebugaran, memperlancar nifas, pemakaian bengkung/gurita, totok wajah relaksasi, dan pemantauan kondisi fisik umum pasca bersalin.",
         price: 250000,
         duration: 90,
-        image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&auto=format&fit=crop&q=80",
+        image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&auto=format&fit=crop&q=80",
       },
       {
         name: "Nebulizer & Pijat Batuk Pilek Anak",
@@ -101,7 +101,7 @@ async function seedDatabase() {
         description: "Layanan fisioterapi dada bagi anak yang sedang menderita batuk pilek dan hidung tersumbat. Meliputi terapi inhalasi uap (nebulizer) dengan cairan fisiologis steril untuk mengencerkan lendir, dilanjutkan dengan pijat dada-punggung untuk melegakan pernapasan.",
         price: 180000,
         duration: 45,
-        image: "https://images.unsplash.com/photo-1484665754804-74b091211472?w=600&auto=format&fit=crop&q=80",
+        image: "https://images.unsplash.com/photo-1584515906207-529b34685f80?w=600&auto=format&fit=crop&q=80",
       },
       {
         name: "Tindik Telinga Bayi Steril & Aman",
