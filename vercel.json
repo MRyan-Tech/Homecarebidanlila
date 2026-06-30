@@ -9,6 +9,11 @@
       "entrypoint": "src/server.js"
     }
   },
+  "functions": {
+    "backend/src/server.js": {
+      "includeFiles": "backend/node_modules/sqlite3/**"
+    }
+  },
   "rewrites": [
     {
       "source": "/api(/.*)?",
