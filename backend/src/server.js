@@ -18,6 +18,14 @@ import bookingRoutes from "./routes/bookings.js";
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+// Global error handlers to prevent silent serverless process crashes
+process.on("unhandledRejection", (reason, promise) => {
+  console.error("Unhandled Rejection at:", promise, "reason:", reason);
+});
+process.on("uncaughtException", (err) => {
+  console.error("Uncaught Exception thrown:", err);
+});
+
 app.use(cors());
 app.use(express.json());
 
@@ -32,6 +40,11 @@ const initDbMiddleware = async (req, res, next) => {
       console.log("Database SQLite synchronized and seeded successfully!");
     } catch (err) {
       console.error("Database initialization failed during request:", err);
+      return res.status(500).json({
+        error: "Database Initialization Failed",
+        message: err.message,
+        stack: err.stack,
+      });
     }
   }
   next();
