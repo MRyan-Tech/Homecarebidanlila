@@ -34,7 +34,7 @@ let dbInitialized = false;
 const initDbMiddleware = async (req, res, next) => {
   if (!dbInitialized) {
     try {
-      await sequelize.sync({ force: false });
+      await sequelize.sync({ alter: true });
       await seedDatabase();
       dbInitialized = true;
       console.log("Database SQLite synchronized and seeded successfully!");

@@ -35,7 +35,7 @@ const Article = sequelize.define("Article", {
     defaultValue: "Kesehatan Ibu & Anak",
   },
   image: {
-    type: DataTypes.STRING,
+    type: DataTypes.TEXT,
     allowNull: true,
   },
   keywords: {

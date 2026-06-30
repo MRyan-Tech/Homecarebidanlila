@@ -35,7 +35,7 @@ const Service = sequelize.define("Service", {
     defaultValue: 0,
   },
   image: {
-    type: DataTypes.STRING,
+    type: DataTypes.TEXT,
     allowNull: true,
   },
 }, {
