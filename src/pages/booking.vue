@@ -20,7 +20,7 @@
     <v-container class="max-width-lg py-6">
       <v-row class="gy-10">
         <!-- Info Column -->
-        <v-col cols="12" md="4" class="pr-md-6">
+        <v-col cols="12" md="4" class="pr-md-6" order="2" order-md="1">
           <v-card class="rounded-xl pa-6 bg-navy text-white h-100 position-relative overflow-hidden elevation-3">
             <div class="decorative-blob"></div>
             
@@ -72,7 +72,7 @@
         </v-col>
 
         <!-- Form Column -->
-        <v-col cols="12" md="8">
+        <v-col cols="12" md="8" order="1" order-md="2">
           <v-card class="rounded-xl pa-8 elevation-3 bg-white">
             <h2 class="text-h5 font-weight-bold text-navy mb-2 font-playfair">Formulir Kunjungan</h2>
             <p class="text-caption text-grey-500 mb-6">Isi formulir untuk pemesanan instan. Menekan tombol submit akan langsung mengarahkan Anda ke WhatsApp Bidan Lila.</p>
