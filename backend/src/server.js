@@ -58,9 +58,19 @@ app.use("/api/services", serviceRoutes);
 app.use("/api/articles", articleRoutes);
 app.use("/api/bookings", bookingRoutes);
 
-// Simple Health Check
+// Simple Health Check & DB Status Diagnostics
 app.get("/", (req, res) => {
   res.send("API Homecare Bidan Lila is Running...");
+});
+
+app.get("/api/db-status", (req, res) => {
+  res.json({
+    status: "running",
+    dialect: sequelize.options.dialect,
+    isPostgres: sequelize.options.dialect === "postgres",
+    hasDatabaseUrl: !!process.env.DATABASE_URL,
+    dbUrlPrefix: process.env.DATABASE_URL ? process.env.DATABASE_URL.substring(0, 15) : "none"
+  });
 });
 
 // Seeder function
