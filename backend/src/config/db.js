@@ -5,7 +5,10 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const dbPath = path.resolve(__dirname, "../../database.sqlite");
+const isVercel = process.env.VERCEL || process.env.AWS_LAMBDA_FUNCTION_VERSION;
+const dbPath = isVercel
+  ? "/tmp/database.sqlite"
+  : path.resolve(__dirname, "../../database.sqlite");
 
 console.log("DATABASE PATH:", dbPath);
 
