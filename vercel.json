@@ -16,22 +16,43 @@
   },
   "rewrites": [
     {
-      "source": "/api(/.*)?",
+      "source": "/api/(.*)",
       "destination": {
         "type": "service",
         "service": "backend"
       }
     },
     {
-      "source": "/((?!api/|assets/|images/|favicon\\.ico).*)/?",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/(.*)",
+      "source": "/assets/(.*)",
       "destination": {
         "type": "service",
         "service": "frontend"
       }
+    },
+    {
+      "source": "/images/(.*)",
+      "destination": {
+        "type": "service",
+        "service": "frontend"
+      }
+    },
+    {
+      "source": "/favicon.ico",
+      "destination": {
+        "type": "service",
+        "service": "frontend"
+      }
+    },
+    {
+      "source": "/index.html",
+      "destination": {
+        "type": "service",
+        "service": "frontend"
+      }
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
