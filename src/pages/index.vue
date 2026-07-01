@@ -26,7 +26,7 @@
             </h1>
             
             <p class="text-body-1 text-grey-200 mb-8 max-w-550" style="line-height: 1.9; font-size: 1.15rem !important;">
-              Bidan Lila menghadirkan layanan homecare premium untuk Ibu & Bayi se-Jabodetabek. Mulai dari Baby Spa stimulus tumbuh kembang, Pijat Laktasi pelancar ASI, hingga Prenatal Massage yang dirancang khusus oleh tenaga medis berlisensi resmi.
+              Bidan Lila menghadirkan layanan homecare premium untuk Ibu & Bayi se-Jabodetabek, dirancang khusus oleh tenaga medis berlisensi resmi.
             </p>
             
             <div class="d-flex flex-wrap gap-4 mb-8">
