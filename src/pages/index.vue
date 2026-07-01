@@ -296,8 +296,8 @@
           <div class="accent-line mx-auto mt-3"></div>
         </div>
 
-        <v-row class="justify-center">
-          <v-col v-for="testi in testimonials" :key="testi.name" cols="12" md="5" class="animate-scroll">
+        <v-row class="justify-center mobile-slider-row">
+          <v-col v-for="testi in testimonials" :key="testi.name" cols="12" md="5" class="animate-scroll mobile-slider-col">
             <v-card class="rounded-xl pa-8 h-100 border border-grey-100 d-flex flex-column justify-space-between bg-white position-relative shadow-sm hover-shadow-primary transition-all">
               <v-icon icon="mdi-format-quote-open" color="pink-lighten-5" size="64" class="position-absolute" style="top: 15px; right: 15px; opacity: 0.8;"></v-icon>
               <div>
