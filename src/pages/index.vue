@@ -233,8 +233,8 @@
         <div class="accent-line mx-auto mt-3"></div>
       </div>
 
-      <v-row>
-        <v-col v-for="service in featuredServices" :key="service.id" cols="12" md="4" class="animate-scroll">
+      <v-row class="mobile-slider-row">
+        <v-col v-for="service in featuredServices" :key="service.id" cols="12" md="4" class="animate-scroll mobile-slider-col">
           <v-card class="service-card rounded-xl elevation-1 h-100 hover-shadow transition-all d-flex flex-column bg-white">
             <v-img :src="service.image" cover class="align-end text-white position-relative service-card-img">
               <v-chip color="primary" class="position-absolute top-4 left-4 font-weight-bold" size="small">
@@ -331,8 +331,8 @@
         <div class="accent-line mx-auto mt-3"></div>
       </div>
 
-      <v-row v-if="articles.length > 0">
-        <v-col v-for="article in articles.slice(0, 3)" :key="article.id" cols="12" md="4" class="animate-scroll">
+      <v-row v-if="articles.length > 0" class="mobile-slider-row">
+        <v-col v-for="article in articles.slice(0, 3)" :key="article.id" cols="12" md="4" class="animate-scroll mobile-slider-col">
           <v-card class="rounded-xl elevation-1 h-100 d-flex flex-column hover-shadow transition-all bg-white">
             <v-img :src="article.image" class="article-card-img" cover></v-img>
             <v-card-item class="flex-grow-1 pa-6">
@@ -585,6 +585,43 @@ onMounted(() => {
 .home-page {
   overflow-x: hidden;
   font-family: 'Outfit', sans-serif !important;
+}
+
+/* Mobile Horizontal Slider styling for a premium mobile app feel */
+@media (max-width: 959px) {
+  .mobile-slider-row {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scroll-snap-type: x mandatory !important;
+    padding-bottom: 12px !important;
+    margin-left: -16px !important;
+    margin-right: -16px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    -webkit-overflow-scrolling: touch !important; /* Smooth iOS kinetic scrolling */
+  }
+  
+  /* Hide scrollbars completely for clean app aesthetics */
+  .mobile-slider-row::-webkit-scrollbar {
+    display: none !important;
+  }
+  .mobile-slider-row {
+    -ms-overflow-style: none !important;
+    scrollbar-width: none !important;
+  }
+
+  .mobile-slider-col {
+    flex: 0 0 85% !important; /* Card peeks 15% to visually hint horizonal scrolling */
+    max-width: 85% !important;
+    scroll-snap-align: start !important;
+    padding: 0 8px !important;
+  }
+  
+  .mobile-slider-col > .v-card {
+    height: 100% !important;
+  }
 }
 
 /* Font Playfair for titles */
