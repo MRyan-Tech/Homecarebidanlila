@@ -28,14 +28,14 @@
                 alt="Bidan Lila"
                 class="rounded-xl bg-pink-lighten-5 mb-4 profile-portrait-img"
               />
-              <h2 class="text-h5 font-weight-bold text-navy mb-1 font-playfair">Bidan Lila, S.Keb</h2>
+              <h2 class="text-h5 font-weight-bold text-navy mb-1 font-playfair">Bidan Lila Pratama Putri, S.Keb</h2>
               <span class="text-caption text-primary font-weight-bold uppercase d-block mb-3">Founder & Bidan Homecare</span>
               
               <v-divider class="my-4"></v-divider>
               
               <div class="text-left text-body-2 text-grey-700 px-2 leading-relaxed">
                 <div class="mb-2 d-flex align-center"><v-icon icon="mdi-card-account-details-outline" class="mr-2" color="primary"></v-icon><strong>STR No:</strong>&nbsp;34.02.1.2.21-2274839</div>
-                <div class="mb-2 d-flex align-center"><v-icon icon="mdi-school-outline" class="mr-2" color="primary"></v-icon><strong>Pendidikan:</strong>&nbsp;Amd. Keb (Kebidanan)</div>
+                <div class="mb-2 d-flex align-center"><v-icon icon="mdi-school-outline" class="mr-2" color="primary"></v-icon><strong>Pendidikan:</strong>&nbsp;S.Keb (Kebidanan)</div>
                 <div class="mb-2 d-flex align-center"><v-icon icon="mdi-briefcase-outline" class="mr-2" color="primary"></v-icon><strong>Pengalaman:</strong>&nbsp;7+ Tahun Layanan Medis</div>
                 <div class="d-flex align-center"><v-icon icon="mdi-badge-account-alert-outline" class="mr-2" color="primary"></v-icon><strong>Sertifikasi:</strong>&nbsp;Mom & Baby Spa, Laktasi</div>
               </div>
