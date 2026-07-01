@@ -58,7 +58,7 @@
             <v-avatar size="100" class="mx-auto mb-4 border border-teal border-lg">
               <v-img src="/images/Logo.png" alt="Bidan Lila"></v-img>
             </v-avatar>
-            <h3 class="text-subtitle-1 font-weight-bold text-navy mb-1">Bidan Lila, Amd. Keb</h3>
+            <h3 class="text-subtitle-1 font-weight-bold text-navy mb-1">Bidan Lila, S.Keb</h3>
             <span class="text-caption text-teal font-weight-bold uppercase d-block mb-4">Founder Bidan Lila Homecare</span>
             <p class="text-caption text-grey-600 leading-relaxed mb-4">
               Seorang Bidan profesional dengan STR terdaftar resmi yang berdedikasi mendampingi para Ibu melalui masa kehamilan, menyusui, dan merawat bayi baru lahir secara ilmiah & penuh kasih sayang.

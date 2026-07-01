@@ -1,5 +1,5 @@
 <template>
-  <div class="articles-page py-12">
+  <div class="articles-page pb-12">
     <!-- Header Section -->
     <v-sheet color="navy" class="py-12 text-white text-center position-relative mb-12">
       <v-container class="max-width-lg">

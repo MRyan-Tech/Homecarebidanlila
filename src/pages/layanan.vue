@@ -1,5 +1,5 @@
 <template>
-  <div class="layanan-page bg-cream-base py-12">
+  <div class="layanan-page bg-cream-base pb-12">
     <!-- Header Section -->
     <v-sheet color="navy" class="py-16 text-white text-center position-relative mb-12">
       <div class="header-bg-wrapper">

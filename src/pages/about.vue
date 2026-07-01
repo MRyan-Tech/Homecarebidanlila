@@ -24,11 +24,11 @@
           <div class="profile-frame position-relative mx-auto">
             <v-card class="rounded-xl overflow-hidden elevation-6 bg-white pa-4 relative z-10">
               <img
-                src="https://images.unsplash.com/photo-1594824813573-246434de83fb?w=800&auto=format&fit=crop&q=80"
+                src="/images/bidan lila.jpg"
                 alt="Bidan Lila"
                 class="rounded-xl bg-pink-lighten-5 mb-4 profile-portrait-img"
               />
-              <h2 class="text-h5 font-weight-bold text-navy mb-1 font-playfair">Bidan Lila, Amd. Keb</h2>
+              <h2 class="text-h5 font-weight-bold text-navy mb-1 font-playfair">Bidan Lila, S.Keb</h2>
               <span class="text-caption text-primary font-weight-bold uppercase d-block mb-3">Founder & Bidan Homecare</span>
               
               <v-divider class="my-4"></v-divider>
