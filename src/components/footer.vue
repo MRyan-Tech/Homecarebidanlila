@@ -56,7 +56,7 @@
           </div>
           <div class="d-flex align-center mb-3">
             <v-icon icon="mdi-email-outline" color="primary" class="mr-2"></v-icon>
-            <span class="text-body-2 text-grey-300">info@bidanlilahomecare.com</span>
+            <span class="text-body-2 text-grey-300">pplila593@gmail.com</span>
           </div>
           <div class="d-flex align-center">
             <v-icon icon="mdi-clock-outline" color="warning" class="mr-2"></v-icon>
