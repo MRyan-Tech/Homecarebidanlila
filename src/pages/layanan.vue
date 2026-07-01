@@ -78,7 +78,7 @@
                 {{ service.name }}
               </h3>
               
-              <div class="d-flex align-center justify-space-between mb-4 text-caption text-grey-500">
+              <div class="d-flex align-center justify-space-between mb-1 text-caption text-grey-500">
                 <div class="d-flex align-center">
                   <v-icon icon="mdi-clock-outline" class="mr-1" size="14" color="primary"></v-icon>
                   <span>{{ service.duration }} Menit</span>
@@ -87,6 +87,7 @@
                   Rp {{ formatPrice(service.price) }}
                 </div>
               </div>
+              <div class="text-xxs text-grey-500 italic mb-4 text-right">*Belum termasuk transport</div>
               
               <p class="text-caption text-grey-600 line-clamp-3 leading-relaxed">
                 {{ service.description }}

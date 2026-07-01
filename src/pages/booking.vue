@@ -75,7 +75,8 @@
         <v-col cols="12" md="8" order="1" order-md="2">
           <v-card class="rounded-xl pa-8 elevation-3 bg-white">
             <h2 class="text-h5 font-weight-bold text-navy mb-2 font-playfair">Formulir Kunjungan</h2>
-            <p class="text-caption text-grey-500 mb-6">Isi formulir untuk pemesanan instan. Menekan tombol submit akan langsung mengarahkan Anda ke WhatsApp Bidan Lila.</p>
+            <p class="text-caption text-grey-500 mb-2">Isi formulir untuk pemesanan instan. Menekan tombol submit akan langsung mengarahkan Anda ke WhatsApp Bidan Lila.</p>
+            <p class="text-caption text-error font-weight-bold italic mb-6">*Catatan: Tarif layanan belum termasuk ongkos / biaya transportasi kunjungan bidan ke rumah.</p>
 
             <v-form ref="form" v-model="isFormValid" @submit.prevent="submitBooking">
               <v-row class="gy-2">

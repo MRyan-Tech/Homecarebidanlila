@@ -31,6 +31,7 @@
                 <v-icon icon="mdi-cash" class="mb-1" size="24"></v-icon>
                 <div class="text-caption text-grey-600">Tarif Homecare</div>
                 <div class="text-subtitle-1 font-weight-bold">Rp {{ formatPrice(service.price) }}</div>
+                <div class="text-xxs text-grey-500 italic mt-1">*Belum termasuk transport</div>
               </v-card>
             </v-col>
           </v-row>
@@ -50,6 +51,7 @@
             <li class="mb-2">Minyak pijat organik premium aman bagi kulit bayi & sensitif</li>
             <li class="mb-2">Aromaterapi khusus untuk suasana rileks layaknya di klinik</li>
             <li class="mb-2">Konsultasi gratis mengenai perawatan ibu & anak selama sesi</li>
+            <li class="mb-2 text-primary font-weight-bold">*Tarif di atas belum termasuk biaya transportasi (ongkir) kunjungan</li>
           </ul>
 
           <div class="d-flex flex-wrap gap-4">

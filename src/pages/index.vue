@@ -247,7 +247,7 @@
                 {{ service.name }}
               </v-card-title>
               
-              <div class="d-flex align-center gap-4 mb-4 text-caption text-grey-500">
+              <div class="d-flex align-center gap-4 mb-1 text-caption text-grey-500">
                 <div class="d-flex align-center">
                   <v-icon icon="mdi-clock-outline" class="mr-1" size="16" color="primary"></v-icon>
                   <span>{{ service.duration }} Menit</span>
@@ -257,6 +257,7 @@
                   <span class="font-weight-bold text-teal">Rp {{ formatPrice(service.price) }}</span>
                 </div>
               </div>
+              <div class="text-xxs text-grey-500 italic mb-4">*Belum termasuk biaya transport kunjungan</div>
               
               <p class="text-body-2 text-grey-600 line-clamp-3 leading-relaxed d-none d-sm-block">
                 {{ service.description }}
