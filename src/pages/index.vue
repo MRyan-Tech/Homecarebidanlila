@@ -1,13 +1,13 @@
 <template>
   <div class="home-page bg-cream-base">
     <!-- Hero Section with Glassmorphism overlay and Background Image -->
-    <v-sheet class="hero-section py-16 position-relative d-flex align-center" min-height="95vh">
+    <v-sheet class="hero-section pt-12 pb-16 position-relative d-flex align-center">
       <div class="hero-bg-wrapper">
         <img src="/images/Bg-Homecare.jpg" alt="Background" class="hero-bg-img" />
       </div>
       <div class="hero-overlay"></div>
       
-      <v-container class="max-width-lg position-relative z-10 py-12">
+      <v-container class="max-width-lg position-relative z-10 pt-6 pb-12">
         <v-row align="center" class="gy-12">
           <!-- Text Content -->
           <v-col cols="12" md="6" class="text-left text-white pr-md-8">
@@ -152,7 +152,7 @@
           <v-col cols="12" md="5" class="d-flex justify-center animate-scroll">
             <div class="about-image-frame position-relative">
               <img
-                src="https://images.unsplash.com/photo-1531062991700-403473034c9d?w=800&auto=format&fit=crop&q=80"
+                src="/images/profile.jpg"
                 alt="Tentang Bidan Lila"
                 class="about-img rounded-xl elevation-6"
               />
@@ -601,6 +601,7 @@ onMounted(() => {
   position: relative;
   overflow: hidden;
   background-color: #0b1522; /* Fallback */
+  min-height: calc(100vh - 75px) !important; /* Perfect full-screen height minus navbar */
 }
 .hero-bg-wrapper {
   position: absolute;
@@ -614,6 +615,7 @@ onMounted(() => {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top; /* Align the top of the image to keep the header text visible without creating gaps */
   filter: brightness(0.55) blur(1px);
 }
 .hero-overlay {
@@ -623,7 +625,7 @@ onMounted(() => {
   width: 100%;
   height: 100%;
   z-index: 2;
-  background: linear-gradient(135deg, rgba(28, 42, 57, 0.95) 0%, rgba(255, 142, 114, 0.5) 100%);
+  background: linear-gradient(135deg, rgba(28, 42, 57, 0.65) 0%, rgba(28, 42, 57, 0.35) 100%);
 }
 .z-10 {
   z-index: 10;
