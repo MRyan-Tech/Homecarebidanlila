@@ -91,7 +91,7 @@
             <div class="brochure-container">
               <div class="glass-bg"></div>
               <img
-                src="/images/image1.jpg"
+                src="/images/Bg-Homecare.jpg"
                 alt="Brosur Layanan Bidan Lila"
                 class="brochure-img rounded-xl"
               />
