@@ -36,8 +36,8 @@
               <div class="text-left text-body-2 text-grey-700 px-2 leading-relaxed">
                 <!-- <div class="mb-2 d-flex align-center"><v-icon icon="mdi-card-account-details-outline" class="mr-2" color="primary"></v-icon><strong>STR No:</strong>&nbsp;34.02.1.2.21-2274839</div> -->
                 <div class="mb-2 d-flex align-center"><v-icon icon="mdi-school-outline" class="mr-2" color="primary"></v-icon><strong>Pendidikan:</strong>&nbsp;S.Keb (Kebidanan)</div>
-                <div class="mb-2 d-flex align-center"><v-icon icon="mdi-briefcase-outline" class="mr-2" color="primary"></v-icon><strong>Pengalaman:</strong>&nbsp;7+ Tahun Layanan Medis</div>
-                <div class="d-flex align-center"><v-icon icon="mdi-badge-account-alert-outline" class="mr-2" color="primary"></v-icon><strong>Sertifikasi:</strong>&nbsp;Mom & Baby Spa, Laktasi</div>
+                <div class="mb-2 d-flex align-center"><v-icon icon="mdi-briefcase-outline" class="mr-2" color="primary"></v-icon><strong>Pengalaman:</strong>&nbsp;7+ Tahun Layanan Therapist</div>
+                <div class="d-flex align-center"><v-icon icon="mdi-badge-account-alert-outline" class="mr-2" color="primary"></v-icon><strong>Sertifikasi:</strong>&nbsp;CBMT-Baby & Mom Therapist</div>
               </div>
             </v-card>
             <div class="decorator-ring"></div>
