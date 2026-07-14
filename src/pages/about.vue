@@ -37,7 +37,7 @@
                 <!-- <div class="mb-2 d-flex align-center"><v-icon icon="mdi-card-account-details-outline" class="mr-2" color="primary"></v-icon><strong>STR No:</strong>&nbsp;34.02.1.2.21-2274839</div> -->
                 <div class="mb-2 d-flex align-center"><v-icon icon="mdi-school-outline" class="mr-2" color="primary"></v-icon><strong>Education :</strong>&nbsp;S.Keb (Kebidanan)</div>
                 <div class="mb-2 d-flex align-center"><v-icon icon="mdi-briefcase-outline" class="mr-2" color="primary"></v-icon><strong>Experience :</strong>&nbsp;7+ Tahun  </div>
-                <div class="d-flex align-center"><v-icon icon="mdi-badge-account-alert-outline" class="mr-2" color="primary"></v-icon><strong>Licences</strong>&nbsp;(CBMT) Certificate Baby & Mom Therapist</div>
+                <div class="d-flex align-center"><v-icon icon="mdi-badge-account-alert-outline" class="mr-2" color="primary"></v-icon><strong></strong>&nbsp;(CBMT) Certificate Baby & Mom Therapist</div>
               </div>
             </v-card>
             <div class="decorator-ring"></div>
